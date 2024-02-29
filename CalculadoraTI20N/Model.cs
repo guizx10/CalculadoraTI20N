@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace CalculadoraTI20N
@@ -68,7 +69,44 @@ namespace CalculadoraTI20N
         }//fim dividir
 
 
+        public string Tabuada()
+        {
+            string resultado = "";
 
+            resultado += "\nTabuada de " + ConsultarNum1;
+            for (int i=0; i <= 10; i++ )
+            {
+                resultado += "\n" + ConsultarNum1 + " * " + i + " = " + (ConsultarNum1* i);
+              
+            }//fim do for
+
+
+            resultado += "\n\nTabuada de " + ConsultarNum2;
+            for (int i = 0; i <= 10; i++)
+            {
+                resultado += "\n " + ConsultarNum2 + " * " + i + " = " + (ConsultarNum2 * i);
+
+            }//fim do for
+
+            return resultado; 
+                
+        }//fim do método Tabuada
+
+        public string Raiz()
+        {
+            string resultado = "";
+
+            resultado = "A raiz de " + ConsultarNum1 + " é: " + Math.Sqrt(ConsultarNum1) +
+                        "\nA raiz de " + ConsultarNum2 + " é: " + Math.Sqrt(ConsultarNum2);
+
+            return resultado; 
+        }//fim do Raiz 
+
+        public double Potencia()
+        {
+            return Math.Pow(ConsultarNum1, ConsultarNum2); 
+
+        }//fim do Método Potencia 
 
 
     }//fim da Classe
